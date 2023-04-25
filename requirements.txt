@@ -1,0 +1,10 @@
+kaggle
+pyarrow
+pandas
+psycopg2-binary
+dbt-core
+dbt-postgres
+metabase
+docker
+docker-compose
+prefect
