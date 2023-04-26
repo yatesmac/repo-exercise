@@ -1,4 +1,3 @@
-kaggle
 pyarrow
 pandas
 psycopg2-binary
