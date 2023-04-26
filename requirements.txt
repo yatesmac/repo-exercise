@@ -8,3 +8,4 @@ metabase
 docker
 docker-compose
 prefect
+black

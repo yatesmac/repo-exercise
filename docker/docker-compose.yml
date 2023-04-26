@@ -1,0 +1,35 @@
+services:
+  postgres:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+      POSTGRES_DB: mydb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  dbt:
+    image: fishtownanalytics/dbt:0.21.0
+    volumes:
+      - ./dbt:/dbt
+    depends_on:
+      - postgres
+
+  metabase:
+    image: metabase/metabase:v0.41.2
+    ports:
+      - "3000:3000"
+    depends_on:
+      - postgres
+
+  prefect:
+    image: prefecthq/prefect:0.15.5-python3.8
+    volumes:
+      - ./prefect:/prefect
+    depends_on:
+      - postgres
+
+volumes:
+  pgdata:

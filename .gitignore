@@ -1,0 +1,14 @@
+# Python
+__pycache__
+
+# policy
+trust-policy.json
+
+# data
+data*
+*.csv
+*.parquet
+
+# logs
+logs/*
+*.log
