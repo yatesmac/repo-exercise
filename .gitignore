@@ -5,9 +5,11 @@ __pycache__
 trust-policy.json
 
 # data
-data*
+Google-Playstore-Dataset/*
 *.csv
 *.parquet
+*.tar
+*.gz
 
 # logs
 logs/*

@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: cleaned_data
+    description: "A dbt model that transforms data from the gpappdata table"
+    database: gpdata
+    tables:
+      - name: gpappdata
+        columns:
+        - name: app
+          description: "The name of the app"
+          tests:
+            - not_null
+            - unique
+        - name: category
+          description: "The category of the app"
+          tests:
+            - not_null
+        - name: rating
+          description: "The user rating of the app"
+          tests:
+            - not_null
+        - name: reviews
+          description: "The number of user reviews for the app"
+          tests:
+            - not_null
+        - name: size_mb
+          description: "The size of the app in megabytes"
+          tests:
+            - not_null
+        - name: installs
+          description: "The number of installs for the app"
+          tests:
+            - not_null
+        - name: type
+          description: "The type of the app (Free or Paid)"
+          tests:
+            - not_null
+        - name: price
+          description: "The price of the app"
+          tests:
+            - not_null
+        - name: content_rating
+          description: "The content rating of the app"
+          tests:
+            - not_null
+        - name: genres
+          description: "The genres of the app"
+          tests:
+            - not_null
+        - name: last_updated
+          description: "The date when the app was last updated"
+          tests:
+            - not_null
+        - name: current_ver
+          description: "The current version of the app"
+          tests:
+            - not_null
+        - name: android_ver
+          description: "The minimum required Android version for the app"
+          tests:
+            - not_null
