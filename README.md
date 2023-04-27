@@ -1,6 +1,6 @@
 # Data Engineering Python Project
 
-This project ingests the Google Play Store dataset  and converts it to parquet format. The parquet file is then loaded into a Postgres database. The data in the database is transformed using dbt. The cleaned data is then used in Metabase to create a dashboard. The Postgres, dbt, and Metabase all run in Docker containers. The entire process is orchestrated using Prefect, which also runs from a Docker container.
+This project ingests the Google Play Store dataset from [kaggle](https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps) or [github](https://github.com/gauthamp10/Google-Playstore-Dataset) and converts it to parquet format. The parquet file is then loaded into a Postgres database. The data in the database is transformed using dbt. The cleaned data is then used in Metabase to create a dashboard. The Postgres, dbt, and Metabase all run in Docker containers. The entire process is orchestrated using Prefect, which also runs from a Docker container.
 
 ## Getting Started
 
@@ -15,7 +15,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository
 ```
-git clone https://github.com/your_username/data-engineering-python-project.git
+git clone https://github.com/yatesmac/repo-exercise.git
 ```
 
 2. Go into the main project folder and build the Docker images
@@ -51,9 +51,10 @@ prefect run flow --file main.py
 * [Metabase](https://www.metabase.com/) - Business intelligence tool
 * [Prefect](https://www.prefect.io/) - Workflow management system
 
-## Authors
+## Notes:
 
-* **Yates Macharaga** - *Initial work* - [YourUsername](https://github.com/your_username)
+1. This project was made in github codespaces, hence some of the file paths reflect that.
+2. Because of limited time, this project is a work in progess, therefore all reviewer feedback is most welcome.
 
 ## License
 

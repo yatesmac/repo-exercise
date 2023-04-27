@@ -1,5 +1,5 @@
 import os
-from prefect import task, Flow
+from prefect import task, flow
 
 from tasks import convert_to_parquet, parquet_to_postgres
 
@@ -26,9 +26,12 @@ def setup_metabase():
     # Set up your Metabase configuration here
     pass
 
-
-with Flow("data-pipeline") as flow:
+@flow
+def data_pipeline():
     download_gp_dataset()
     convert_csv_to_parquet()
     load_parquet_to_postgres()
     run_dbt_transformations()
+
+if __name__ == "__main__":
+    data_pipeline()
