@@ -1,4 +1,4 @@
-# Data Engineering Python Project
+# Google Play Store Data Engineering Python Project
 
 This project ingests the Google Play Store dataset from [kaggle](https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps) or [github](https://github.com/gauthamp10/Google-Playstore-Dataset) and converts it to parquet format. The parquet file is then loaded into a Postgres database. The data in the database is transformed using dbt. The cleaned data is then used in Metabase to create a dashboard. The Postgres, dbt, and Metabase all run in Docker containers. The entire process is orchestrated using Prefect, which also runs from a Docker container.
 
