@@ -1,6 +1,6 @@
 # Google Play Store Data Engineering Python Project
 
-This project ingests the Google Play Store dataset from [kaggle](https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps) or [github](https://github.com/gauthamp10/Google-Playstore-Dataset) and converts it to parquet format. The parquet file is then loaded into a Postgres database. The data in the database is transformed using dbt. The cleaned data is then used in Metabase to create a dashboard. The Postgres, dbt, and Metabase all run in Docker containers. The entire process is orchestrated using Prefect, which also runs from a Docker container.
+This project ingests the Google Play Store dataset (from [kaggle](https://www.kaggle.com/datasets/gauthamp10/google-playstore-apps) or [github](https://github.com/gauthamp10/Google-Playstore-Dataset)) and converts it to parquet format. The parquet file is then loaded into a Postgres database. The data in the database is transformed using dbt. The cleaned data is then used in Metabase to create a dashboard. The Postgres, dbt, and Metabase all run in Docker containers. The entire process is orchestrated using Prefect, which also runs from a Docker container.
 
 ## Getting Started
 
@@ -18,16 +18,12 @@ These instructions will get you a copy of the project up and running on your loc
 git clone https://github.com/yatesmac/repo-exercise.git
 ```
 
-2. Go into the main project folder and build the Docker images
+2. Install dependancies and set up containers
 ```
-docker-compose build
+python3 -m setup.py
 ```
 
-3. Start the Docker containers
-```
-docker-compose up
-```
-4. Running the Pipeline
+3. Running the Pipeline
 ```
 prefect run flow --file main.py
 ```
@@ -44,7 +40,7 @@ prefect run flow --file main.py
 
 * [Docker](https://www.docker.com/) - Containerization platform
 * [Python](https://www.python.org/) - Programming language
-* [GitHub Codespaces](https://www.github.com/) - Data platform
+* [GitHub Codespaces](https://www.github.com/) - Platform
 * [Parquet](https://parquet.apache.org/) - Columnar storage format
 * [Postgres](https://www.postgresql.org/) - Data Warehouse
 * [dbt](https://www.getdbt.com/) - Data transformation tool
@@ -53,11 +49,8 @@ prefect run flow --file main.py
 
 ## Notes:
 
-1. This project was made in github codespaces, hence some of the file paths reflect that.
-2. Because of limited time, this project is a work in progess, therefore all reviewer feedback is most welcome.
+- This project was made in github codespaces, hence some of the file paths reflect that.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-
-Is there anything else you would like me to add?
